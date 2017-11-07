@@ -23,7 +23,11 @@ cc.Class({
             return;
         }
         var audio = this.audioSource;
-        this.label.string = audio.getCurrentTime().toFixed(1) + ' s / ' + audio.getDuration().toFixed(1) + ' s';
+        var currentTime = audio.getCurrentTime();
+        var duration = audio.getDuration();
+        if (currentTime && duration) {
+            this.label.string = audio.getCurrentTime().toFixed(1) + ' s / ' + audio.getDuration().toFixed(1) + ' s';
+        }
     },
     
     play: function () {

@@ -85,5 +85,10 @@
   "simulator-resolution": {
     "width": 960,
     "height": 640
+  },
+  "cocos-analytics": {
+    "enable": false,
+    "appID": "",
+    "appSecret": ""
   }
 }
